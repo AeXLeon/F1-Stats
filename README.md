@@ -2,7 +2,7 @@
 
 Eine benutzerfreundliche Formel 1 Statistik-App mit Live-Daten der aktuellen Saison.
 
-###*Website soon?*
+*Website soon?*
 
 ## ⭐ Features
 
