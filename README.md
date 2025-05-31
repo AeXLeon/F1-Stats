@@ -3,7 +3,7 @@
 Eine moderne Webanwendung zur Anzeige von Formel 1 Statistiken, Fahrern und Rennergebnissen.
 
 ## Features
-
+*Currently Nor Working*
 - 🏎️ Aktuelle F1-Fahrerübersicht
 - 📊 Detaillierte Fahrerstatistiken
 - 🏁 Rennkalender und Ergebnisse
