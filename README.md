@@ -4,11 +4,11 @@ Eine benutzerfreundliche Formel 1 Statistik-App mit Live-Daten der aktuellen Sai
 
 ## ⭐ Features
 *Currently Not Working*
-- 👥 Aktuelle F1-Fahrerübersicht mit Detailansicht
-- 📊 Umfangreiche Statistiken (Siege, Podien, Punkte)
-- 🏁 Live-Rennkalender mit Ergebnissen
-- 🔍 Schnelle Suchfunktion für Fahrer und Teams
-- 📱 Responsive Design für alle Geräte
+|- 👥 Aktuelle F1-Fahrerübersicht mit Detailansicht
+|- 📊 Umfangreiche Statistiken (Siege, Podien, Punkte)
+|- 🏁 Live-Rennkalender mit Ergebnissen
+|- 🔍 Schnelle Suchfunktion für Fahrer und Teams
+|- 📱 Responsive Design für alle Geräte
 
 ## 📥 Installation
 
