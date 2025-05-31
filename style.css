@@ -1,592 +1,592 @@
 /* Global Styles */
-+:root {
-+    --primary-color: #e10600;
-+    --secondary-color: #15151e;
-+    --accent-color: #ffffff;
-+    --text-color: #333333;
-+    --light-gray: #f4f4f4;
-+    --medium-gray: #e0e0e0;
-+    --dark-gray: #777777;
-+}
-+
-+* {
-+    margin: 0;
-+    padding: 0;
-+    box-sizing: border-box;
-+}
-+
-+body {
-+    font-family: 'Roboto', Arial, sans-serif;
-+    line-height: 1.6;
-+    color: var(--text-color);
-+    background-color: #f9f9f9;
-+}
-+
-+a {
-+    text-decoration: none;
-+    color: inherit;
-+}
-+
-+ul {
-+    list-style: none;
-+}
-+
-+button {
-+    cursor: pointer;
-+    border: none;
-+    outline: none;
-+    font-family: inherit;
-+}
-+
-+.view-all, .view-details {
-+    background-color: var(--secondary-color);
-+    color: white;
-+    padding: 8px 16px;
-+    border-radius: 4px;
-+    font-weight: 500;
-+    transition: background-color 0.3s;
-+    display: block;
-+    margin: 20px auto 0;
-+    text-align: center;
-+    width: fit-content;
-+}
-+
-+.view-all:hover, .view-details:hover {
-+    background-color: #2a2a3a;
-+}
-+
-+/* Header Styles */
-+header {
-+    background-color: var(--secondary-color);
-+    color: white;
-+    padding: 15px 5%;
-+    display: flex;
-+    justify-content: space-between;
-+    align-items: center;
-+    position: sticky;
-+    top: 0;
-+    z-index: 100;
-+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-+}
-+
-+.logo img {
-+    height: 40px;
-+}
-+
-+nav ul {
-+    display: flex;
-+}
-+
-+nav ul li {
-+    margin-left: 25px;
-+}
-+
-+nav ul li a {
-+    font-weight: 500;
-+    padding: 5px 0;
-+    position: relative;
-+    transition: color 0.3s;
-+}
-+
-+nav ul li a:hover {
-+    color: var(--primary-color);
-+}
-+
-+nav ul li a.active {
-+    color: var(--primary-color);
-+}
-+
-+nav ul li a.active::after {
-+    content: '';
-+    position: absolute;
-+    bottom: -5px;
-+    left: 0;
-+    width: 100%;
-+    height: 3px;
-+    background-color: var(--primary-color);
-+}
-+
-+/* Hero Section */
-+.hero {
-+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://www.formula1.com/content/dam/fom-website/manual/Misc/2021manual/2021BritishManualAdds/GettyImages-1327757559.jpg.transform/9col/image.jpg');
-+    background-size: cover;
-+    background-position: center;
-+    color: white;
-+    text-align: center;
-+    padding: 100px 20px;
-+}
-+
-+.hero-content {
-+    max-width: 800px;
-+    margin: 0 auto;
-+}
-+
-+.hero h1 {
-+    font-size: 3rem;
-+    margin-bottom: 20px;
-+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-+}
-+
-+.hero p {
-+    font-size: 1.2rem;
-+    margin-bottom: 30px;
-+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-+}
-+
-+.cta-button {
-+    background-color: var(--primary-color);
-+    color: white;
-+    padding: 12px 30px;
-+    font-size: 1.1rem;
-+    font-weight: 600;
-+    border-radius: 5px;
-+    transition: background-color 0.3s, transform 0.2s;
-+}
-+
-+.cta-button:hover {
-+    background-color: #c00500;
-+    transform: translateY(-2px);
-+}
-+
-+/* Main Content */
-+main {
-+    max-width: 1200px;
-+    margin: 40px auto;
-+    padding: 0 20px;
-+}
-+
-+section {
-+    margin-bottom: 50px;
-+}
-+
-+h2 {
-+    font-size: 1.8rem;
-+    margin-bottom: 20px;
-+    color: var(--secondary-color);
-+    position: relative;
-+    padding-bottom: 10px;
-+}
-+
-+h2::after {
-+    content: '';
-+    position: absolute;
-+    bottom: 0;
-+    left: 0;
-+    width: 60px;
-+    height: 3px;
-+    background-color: var(--primary-color);
-+}
-+
-+/* Latest Race Results */
-+.race-card {
-+    background-color: white;
-+    border-radius: 8px;
-+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-+    padding: 25px;
-+    margin-bottom: 20px;
-+}
-+
-+.race-info {
-+    margin-bottom: 20px;
-+    text-align: center;
-+}
-+
-+.race-info h3 {
-+    font-size: 1.5rem;
-+    color: var(--secondary-color);
-+}
-+
-+.race-date, .race-location {
-+    color: var(--dark-gray);
-+    margin-top: 5px;
-+}
-+
-+.podium {
-+    display: flex;
-+    justify-content: center;
-+    align-items: flex-end;
-+    margin: 30px 0;
-+    gap: 20px;
-+}
-+
-+.podium-position {
-+    text-align: center;
-+    padding: 15px;
-+    border-radius: 8px;
-+    background-color: white;
-+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-+    transition: transform 0.3s;
-+}
-+
-+.podium-position:hover {
-+    transform: translateY(-5px);
-+}
-+
-+.podium-position.first {
-+    order: 2;
-+    padding-bottom: 25px;
-+    border-top: 5px solid gold;
-+}
-+
-+.podium-position.second {
-+    order: 1;
-+    padding-bottom: 15px;
-+    border-top: 5px solid silver;
-+}
-+
-+.podium-position.third {
-+    order: 3;
-+    padding-bottom: 10px;
-+    border-top: 5px solid #cd7f32; /* bronze */
-+}
-+
-+.position {
-+    display: inline-block;
-+    width: 30px;
-+    height: 30px;
-+    line-height: 30px;
-+    border-radius: 50%;
-+    background-color: var(--secondary-color);
-+    color: white;
-+    font-weight: bold;
-+    margin-bottom: 10px;
-+}
-+
-+.driver-img {
-+    width: 60px;
-+    height: 60px;
-+    border-radius: 50%;
-+    object-fit: cover;
-+    margin-bottom: 10px;
-+}
-+
-+.driver-name {
-+    font-weight: bold;
-+    margin-bottom: 5px;
-+}
-+
-+.team {
-+    color: var(--dark-gray);
-+    font-size: 0.9rem;
-+}
-+
-+/* Upcoming Races */
-+.race-calendar {
-+    display: flex;
-+    flex-direction: column;
-+    gap: 15px;
-+}
-+
-+.race-event {
-+    display: flex;
-+    align-items: center;
-+    background-color: white;
-+    border-radius: 8px;
-+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-+    padding: 15px;
-+    transition: transform 0.3s;
-+}
-+
-+.race-event:hover {
-+    transform: translateX(5px);
-+}
-+
-+.race-date {
-+    display: flex;
-+    flex-direction: column;
-+    align-items: center;
-+    justify-content: center;
-+    min-width: 70px;
-+    padding: 10px;
-+    background-color: var(--primary-color);
-+    color: white;
-+    border-radius: 5px;
-+    margin-right: 20px;
-+}
-+
-+.month {
-+    font-size: 0.8rem;
-+    font-weight: 500;
-+}
-+
-+.day {
-+    font-size: 1.5rem;
-+    font-weight: bold;
-+}
-+
-+.race-details {
-+    flex-grow: 1;
-+}
-+
-+.race-details h3 {
-+    font-size: 1.2rem;
-+    margin-bottom: 5px;
-+}
-+
-+.circuit, .location {
-+    color: var(--dark-gray);
-+    font-size: 0.9rem;
-+}
-+
-+.countdown {
-+    margin-left: auto;
-+    padding: 0 15px;
-+    font-weight: 500;
-+    color: var(--primary-color);
-+}
-+
-+/* Standings */
-+.standings-container {
-+    display: grid;
-+    grid-template-columns: 1fr 1fr;
-+    gap: 30px;
-+}
-+
-+.driver-standings, .team-standings {
-+    background-color: white;
-+    border-radius: 8px;
-+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-+    padding: 25px;
-+}
-+
-+.standings-table {
-+    width: 100%;
-+    border-collapse: collapse;
-+    margin-top: 15px;
-+}
-+
-+.standings-table th {
-+    text-align: left;
-+    padding: 12px 15px;
-+    background-color: var(--light-gray);
-+    font-weight: 600;
-+}
-+
-+.standings-table td {
-+    padding: 12px 15px;
-+    border-bottom: 1px solid var(--medium-gray);
-+}
-+
-+.driver-info, .team-info {
-+    display: flex;
-+    align-items: center;
-+}
-+
-+.driver-number {
-+    display: inline-block;
-+    width: 25px;
-+    height: 25px;
-+    line-height: 25px;
-+    text-align: center;
-+    border-radius: 3px;
-+    color: white;
-+    font-weight: bold;
-+    font-size: 0.8rem;
-+    margin-right: 10px;
-+}
-+
-+.team-color {
-+    display: inline-block;
-+    width: 4px;
-+    height: 20px;
-+    border-radius: 2px;
-+    margin-right: 10px;
-+}
-+
-+/* Footer */
-+footer {
-+    background-color: var(--secondary-color);
-+    color: white;
-+    padding: 50px 20px 20px;
-+}
-+
-+.footer-content {
-+    max-width: 1200px;
-+    margin: 0 auto;
-+    display: grid;
-+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-+    gap: 30px;
-+}
-+
-+.footer-logo img {
-+    height: 40px;
-+    margin-bottom: 15px;
-+}
-+
-+.footer-logo p {
-+    font-size: 0.9rem;
-+    color: #aaa;
-+}
-+
-+.footer-links h3, .footer-social h3, .footer-newsletter h3 {
-+    margin-bottom: 15px;
-+    font-size: 1.1rem;
-+}
-+
-+.footer-links ul li {
-+    margin-bottom: 10px;
-+}
-+
-+.footer-links ul li a {
-+    color: #ddd;
-+    transition: color 0.3s;
-+}
-+
-+.footer-links ul li a:hover {
-+    color: var(--primary-color);
-+}
-+
-+.social-icons {
-+    display: flex;
-+    gap: 15px;
-+}
-+
-+.social-icons a {
-+    display: inline-block;
-+    width: 36px;
-+    height: 36px;
-+    background-color: rgba(255, 255, 255, 0.1);
-+    border-radius: 50%;
-+    text-align: center;
-+    line-height: 36px;
-+    transition: background-color 0.3s;
-+}
-+
-+.social-icons a:hover {
-+    background-color: var(--primary-color);
-+}
-+
-+.footer-newsletter p {
-+    margin-bottom: 15px;
-+    color: #ddd;
-+}
-+
-+.footer-newsletter form {
-+    display: flex;
-+}
-+
-+.footer-newsletter input {
-+    flex-grow: 1;
-+    padding: 10px;
-+    border: none;
-+    border-radius: 4px 0 0 4px;
-+}
-+
-+.footer-newsletter button {
-+    background-color: var(--primary-color);
-+    color: white;
-+    padding: 10px 15px;
-+    border-radius: 0 4px 4px 0;
-+    transition: background-color 0.3s;
-+}
-+
-+.footer-newsletter button:hover {
-+    background-color: #c00500;
-+}
-+
-+.footer-bottom {
-+    max-width: 1200px;
-+    margin: 40px auto 0;
-+    padding-top: 20px;
-+    border-top: 1px solid rgba(255, 255, 255, 0.1);
-+    text-align: center;
-+    font-size: 0.9rem;
-+    color: #aaa;
-+}
-+
-+.footer-bottom p:first-child {
-+    margin-bottom: 5px;
-+}
-+
-+/* Responsive Design */
-+@media (max-width: 992px) {
-+    .standings-container {
-+        grid-template-columns: 1fr;
-+    }
-+    
-+    .team-standings {
-+        margin-top: 30px;
-+    }
-+}
-+
-+@media (max-width: 768px) {
-+    header {
-+        flex-direction: column;
-+    }
-+    
-+    nav ul {
-+        margin-top: 15px;
-+    }
-+    
-+    nav ul li {
-+        margin: 0 10px;
-+    }
-+    
-+    .hero h1 {
-+        font-size: 2.5rem;
-+    }
-+    
-+    .podium {
-+        flex-direction: column;
-+        align-items: center;
-+    }
-+    
-+    .podium-position {
-+        width: 80%;
-+        max-width: 250px;
-+    }
-+    
-+    .podium-position.first,
-+    .podium-position.second,
-+    .podium-position.third {
-+        order: unset;
-+    }
-+}
-+
-+@media (max-width: 576px) {
-+    nav ul {
-+        flex-wrap: wrap;
-+        justify-content: center;
-+    }
-+    
-+    nav ul li {
-+        margin: 5px 10px;
-+    }
-+    
-+    .hero h1 {
-+        font-size: 2rem;
-+    }
-+    
-+    .hero p {
-+        font-size: 1rem;
-+    }
-+    
-+    .race-event {
-+        flex-direction: column;
-+        text-align: center;
-+    }
-+    
-+    .race-date {
-+        margin-right: 0;
-+        margin-bottom: 15px;
-+    }
-+    
-+    .countdown {
-+        margin-left: 0;
-+        margin-top: 15px;
-+    }
-+    
-+    .footer-newsletter form {
-+        flex-direction: column;
-+    }
-+    
-+    .footer-newsletter input,
-+    .footer-newsletter button {
-+        width: 100%;
-+        border-radius: 4px;
-+    }
-+    
-+    .footer-newsletter button {
-+        margin-top: 10px;
-+    }
-+}
+:root {
+    --primary-color: #e10600;
+    --secondary-color: #15151e;
+    --accent-color: #ffffff;
+    --text-color: #333333;
+    --light-gray: #f4f4f4;
+    --medium-gray: #e0e0e0;
+    --dark-gray: #777777;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f9f9f9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-family: inherit;
+}
+
+.view-all, .view-details {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 20px auto 0;
+    text-align: center;
+    width: fit-content;
+}
+
+.view-all:hover, .view-details:hover {
+    background-color: #2a2a3a;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+nav ul li a.active {
+    color: var(--primary-color);
+}
+
+nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://www.formula1.com/content/dam/fom-website/manual/Misc/2021manual/2021BritishManualAdds/GettyImages-1327757559.jpg.transform/9col/image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #c00500;
+    transform: translateY(-2px);
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+/* Latest Race Results */
+.race-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.race-info {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.race-info h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.race-date, .race-location {
+    color: var(--dark-gray);
+    margin-top: 5px;
+}
+
+.podium {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 30px 0;
+    gap: 20px;
+}
+
+.podium-position {
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.podium-position:hover {
+    transform: translateY(-5px);
+}
+
+.podium-position.first {
+    order: 2;
+    padding-bottom: 25px;
+    border-top: 5px solid gold;
+}
+
+.podium-position.second {
+    order: 1;
+    padding-bottom: 15px;
+    border-top: 5px solid silver;
+}
+
+.podium-position.third {
+    order: 3;
+    padding-bottom: 10px;
+    border-top: 5px solid #cd7f32; /* bronze */
+}
+
+.position {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.driver-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.driver-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.team {
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+}
+
+/* Upcoming Races */
+.race-calendar {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.race-event {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s;
+}
+
+.race-event:hover {
+    transform: translateX(5px);
+}
+
+.race-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 70px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.month {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.day {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.race-details {
+    flex-grow: 1;
+}
+
+.race-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.circuit, .location {
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+}
+
+.countdown {
+    margin-left: auto;
+    padding: 0 15px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+/* Standings */
+.standings-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.driver-standings, .team-standings {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+}
+
+.standings-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.standings-table th {
+    text-align: left;
+    padding: 12px 15px;
+    background-color: var(--light-gray);
+    font-weight: 600;
+}
+
+.standings-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--medium-gray);
+}
+
+.driver-info, .team-info {
+    display: flex;
+    align-items: center;
+}
+
+.driver-number {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-right: 10px;
+}
+
+.team-color {
+    display: inline-block;
+    width: 4px;
+    height: 20px;
+    border-radius: 2px;
+    margin-right: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 50px 20px 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.footer-logo img {
+    height: 40px;
+    margin-bottom: 15px;
+}
+
+.footer-logo p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.footer-links h3, .footer-social h3, .footer-newsletter h3 {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #ddd;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: var(--primary-color);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+    transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-color);
+}
+
+.footer-newsletter p {
+    margin-bottom: 15px;
+    color: #ddd;
+}
+
+.footer-newsletter form {
+    display: flex;
+}
+
+.footer-newsletter input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.footer-newsletter button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 0 4px 4px 0;
+    transition: background-color 0.3s;
+}
+
+.footer-newsletter button:hover {
+    background-color: #c00500;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.footer-bottom p:first-child {
+    margin-bottom: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .standings-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-standings {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    
+    nav ul {
+        margin-top: 15px;
+    }
+    
+    nav ul li {
+        margin: 0 10px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .podium {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .podium-position {
+        width: 80%;
+        max-width: 250px;
+    }
+    
+    .podium-position.first,
+    .podium-position.second,
+    .podium-position.third {
+        order: unset;
+    }
+}
+
+@media (max-width: 576px) {
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 5px 10px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .race-event {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .race-date {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .countdown {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    
+    .footer-newsletter form {
+        flex-direction: column;
+    }
+    
+    .footer-newsletter input,
+    .footer-newsletter button {
+        width: 100%;
+        border-radius: 4px;
+    }
+    
+    .footer-newsletter button {
+        margin-top: 10px;
+    }
+}
