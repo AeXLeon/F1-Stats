@@ -1,7 +1,4 @@
---- script.js
-+++ script.js
-@@ -0,0 +1,153 @@
-+document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
 +    // Update countdown timers for upcoming races
 +    updateCountdowns();
 +    
