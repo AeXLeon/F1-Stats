@@ -1,7 +1,4 @@
---- styles.css
-+++ styles.css
-@@ -0,0 +1,592 @@
-+/* Global Styles */
+/* Global Styles */
 +:root {
 +    --primary-color: #e10600;
 +    --secondary-color: #15151e;
