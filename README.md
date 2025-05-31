@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# F1 Stats Hub
 
-## Getting Started
+Eine moderne Webanwendung zur Anzeige von Formel 1 Statistiken, Fahrern und Rennergebnissen.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- 🏎️ Aktuelle F1-Fahrerübersicht
+- 📊 Detaillierte Fahrerstatistiken
+- 🏁 Rennkalender und Ergebnisse
+- 🔍 Echtzeit-Suchfunktion
+- 🌐 Live-API-Integration
+
+## Schnellstart
+
+### Automatische Installation (Empfohlen)
+
+Kopieren Sie einfach diesen Befehl und führen Sie ihn in PowerShell aus:
+
+```powershell
+$ScriptBlock = {
+    Write-Host "🏁 Starte F1 Stats Hub Installation..." -ForegroundColor Cyan
+    npm install
+    if ($LASTEXITCODE -eq 0) {
+        Write-Host "✅ Abhängigkeiten erfolgreich installiert" -ForegroundColor Green
+        Write-Host "🚀 Starte Entwicklungsserver..." -ForegroundColor Cyan
+        npm run dev
+    } else {
+        Write-Host "❌ Fehler bei der Installation" -ForegroundColor Red
+    }
+}
+Start-Process powershell -ArgumentList "-NoExit", "-Command", $ScriptBlock
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Manuelle Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Installieren Sie die Abhängigkeiten:
+```bash
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Starten Sie den Entwicklungsserver:
+```bash
+npm run dev
+```
 
-## Learn More
+3. Öffnen Sie [http://localhost:3000](http://localhost:3000) im Browser
 
-To learn more about Next.js, take a look at the following resources:
+## API Status
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Diese Anwendung nutzt die OpenF1 API. Der aktuelle Status wird am unteren Bildschirmrand angezeigt.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Technologie-Stack
 
-## Deploy on Vercel
+- Next.js 14
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Hinweis
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Diese Seite ist ein von Fans erstelltes Projekt und steht in keiner Verbindung zur Formel 1® oder Formula One World Championship Limited.
