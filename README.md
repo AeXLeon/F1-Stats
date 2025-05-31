@@ -1,5 +1,5 @@
 # 🏎️ F1 Stats Hub
-## we use *https://openf1.org/*
+## *we use https://openf1.org/*
 Eine benutzerfreundliche Formel 1 Statistik-App mit Live-Daten der aktuellen Saison.
 
 ## ⭐ Features
