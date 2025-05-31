@@ -1,62 +1,95 @@
-# F1 Stats Hub
+# 🏎️ F1 Stats Hub
 
-Eine moderne Webanwendung zur Anzeige von Formel 1 Statistiken, Fahrern und Rennergebnissen.
+Eine benutzerfreundliche Formel 1 Statistik-App mit Live-Daten der aktuellen Saison.
 
-## Features
-*Currently Nor Working*
-- 🏎️ Aktuelle F1-Fahrerübersicht
-- 📊 Detaillierte Fahrerstatistiken
-- 🏁 Rennkalender und Ergebnisse
-- 🔍 Echtzeit-Suchfunktion
-- 🌐 Live-API-Integration
+## ⭐ Features
 
-## Schnellstart
+- 👥 Aktuelle F1-Fahrerübersicht mit Detailansicht
+- 📊 Umfangreiche Statistiken (Siege, Podien, Punkte)
+- 🏁 Live-Rennkalender mit Ergebnissen
+- 🔍 Schnelle Suchfunktion für Fahrer und Teams
+- 📱 Responsive Design für alle Geräte
 
-### Automatische Installation (Empfohlen)
+## 📥 Installation
 
-Kopieren Sie einfach diesen Befehl und führen Sie ihn in PowerShell aus:
+### Methode 1: Express-Installation (Empfohlen)
+
+1. Öffnen Sie PowerShell (Rechtsklick auf Start → Windows PowerShell)
+2. Kopieren Sie den gesamten Block und fügen Sie ihn ein:
 
 ```powershell
-$ScriptBlock = {
-    Write-Host "🏁 Starte F1 Stats Hub Installation..." -ForegroundColor Cyan
-    npm install
-    if ($LASTEXITCODE -eq 0) {
-        Write-Host "✅ Abhängigkeiten erfolgreich installiert" -ForegroundColor Green
-        Write-Host "🚀 Starte Entwicklungsserver..." -ForegroundColor Cyan
-        npm run dev
-    } else {
-        Write-Host "❌ Fehler bei der Installation" -ForegroundColor Red
-    }
-}
-Start-Process powershell -ArgumentList "-NoExit", "-Command", $ScriptBlock
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass; `
+$Block = { `
+  Write-Host "`n🏁 Starte F1 Stats Hub...`n" -ForegroundColor Cyan; `
+  if (!(Get-Command npm -ErrorAction SilentlyContinue)) { `
+    Write-Host "❌ Node.js fehlt! Bitte installieren Sie es von: https://nodejs.org/`n" -ForegroundColor Red; `
+    pause; exit 1 `
+  } `
+  Write-Host "📦 Installiere Abhängigkeiten...`n" -ForegroundColor Yellow; `
+  npm install; `
+  if ($LASTEXITCODE -eq 0) { `
+    Write-Host "`n✅ Installation erfolgreich!`n" -ForegroundColor Green; `
+    Write-Host "🚀 Starte Entwicklungsserver...`n" -ForegroundColor Cyan; `
+    npm run dev `
+  } else { `
+    Write-Host "`n❌ Fehler bei der Installation. Bitte prüfen Sie die Fehlermeldungen.`n" -ForegroundColor Red; `
+    pause `
+  } `
+}; `
+Start-Process powershell -ArgumentList "-NoExit", "-Command", $Block
 ```
 
-### Manuelle Installation
+### Methode 2: Schritt-für-Schritt Installation
 
-1. Installieren Sie die Abhängigkeiten:
-```bash
-npm install
-```
+#### Voraussetzungen
+1. **Node.js installieren**
+   - Gehen Sie auf [nodejs.org](https://nodejs.org/)
+   - Laden Sie die LTS-Version herunter
+   - Führen Sie die Installation aus
+   - Überprüfen Sie die Installation:
+     ```powershell
+     node --version
+     npm --version
+     ```
 
-2. Starten Sie den Entwicklungsserver:
-```bash
-npm run dev
-```
+2. **Projekt herunterladen**
+   - Laden Sie das Projekt herunter
+   - Entpacken Sie es in einen Ordner Ihrer Wahl
+   - Öffnen Sie PowerShell im Projektordner
 
-3. Öffnen Sie [http://localhost:3000](http://localhost:3000) im Browser
+3. **Abhängigkeiten installieren**
+   ```powershell
+   npm install
+   ```
 
-## API Status
+4. **Entwicklungsserver starten**
+   ```powershell
+   npm run dev
+   ```
 
-Diese Anwendung nutzt die OpenF1 API. Der aktuelle Status wird am unteren Bildschirmrand angezeigt.
+5. **App öffnen**
+   - Öffnen Sie [http://localhost:3000](http://localhost:3000) im Browser
+   - Die App startet automatisch und lädt die aktuellen F1-Daten
 
-## Technologie-Stack
+## 🛠️ Technische Details
 
-- Next.js 14
-- React
-- TypeScript
-- Tailwind CSS
-- Framer Motion
+### Verwendete Technologien
+- ⚛️ **Next.js 14** - React Framework
+- 🎨 **Tailwind CSS** - Styling
+- 📝 **TypeScript** - Type-Safety
+- 🎭 **Framer Motion** - Animationen
+- 🌐 **OpenF1 API** - Live-Daten
 
-## Hinweis
+### API-Status
+- Der aktuelle API-Status wird am unteren Bildschirmrand angezeigt
+- Bei Problemen erscheint eine Warnung oben auf der Seite
 
-Diese Seite ist ein von Fans erstelltes Projekt und steht in keiner Verbindung zur Formel 1® oder Formula One World Championship Limited.
+## ⚠️ Hinweise
+
+- Die App aktualisiert Daten automatisch
+- Keine Anmeldung erforderlich
+- Kostenlose Nutzung
+- Von Fans für Fans entwickelt
+
+---
+*Dieses Projekt ist ein von Fans erstelltes Werk und steht in keiner Verbindung zur Formel 1® oder Formula One World Championship Limited.*
