@@ -1,4 +1,4 @@
-# *UPDATE PLANNED*
+# *!UPDATE PLANNED!*
 
 
 # 🏎️ F1 Stats Hub
